@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Password</string>
+    <string name="sing_in">Sing in</string>
+    <string name="by_date_sort">by date sort</string>
+    <string name="server_sort">server sort</string>
+    <string name="cast">Cast</string>
+    <string name="invalid_parameters">Invalid parameters</string>
+</resources>
