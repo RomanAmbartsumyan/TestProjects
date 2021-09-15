@@ -2,10 +2,8 @@ package com.example.testapp.fragments.register
 
 import com.example.testapp.connection.Api
 import com.example.testapp.objects.Register
-import javax.inject.Inject
 
-class RegisterFragmentRepositoryImpl @Inject constructor(private val api: Api) :
-    RegisterFragmentRepository {
+class RegisterFragmentRepositoryImpl(private val api: Api) : RegisterFragmentRepository {
 
     override suspend fun getPhone(): String = api.getPhone().phoneMask
 

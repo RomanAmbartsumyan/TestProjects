@@ -6,7 +6,6 @@ import android.widget.Toast
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -16,13 +15,12 @@ import com.example.testapp.objects.Register
 import com.example.testapp.store.DataStoreKeys
 import com.example.testapp.utils.getResultFromDataStore
 import com.example.testapp.utils.saveKeyToDataStore
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
 class RegisterFragment : Fragment(R.layout.fragment_register) {
     private val binding: FragmentRegisterBinding by viewBinding()
-    private val viewModel: RegisterFragmentViewModel by viewModels()
+    private val viewModel: RegisterFragmentViewModel by viewModel()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

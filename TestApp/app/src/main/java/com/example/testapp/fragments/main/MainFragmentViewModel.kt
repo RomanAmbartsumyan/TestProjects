@@ -8,17 +8,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.testapp.objects.Card
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
-import javax.inject.Inject
 
-@HiltViewModel
-class MainFragmentViewModel @Inject constructor(
+
+class MainFragmentViewModel(
     application: Application,
     private val repository: MainFragmentRepository
 ) :
