@@ -1,0 +1,14 @@
+        val appUri = Uri.parse("https://instagram.com/_u/user_name")
+        val browserUri = Uri.parse("https://instagram.com/user_name")
+
+        try { //first try to open in instagram app
+            val appIntent = packageManager.getLaunchIntentForPackage("com.instagram.android")
+            if (appIntent != null) {
+                appIntent.action = Intent.ACTION_VIEW
+                appIntent.data = appUri
+                startActivity(appIntent)
+            }
+        } catch (ex: Exception) { //or else open in browser
+            val browserIntent = Intent(Intent.ACTION_VIEW, browserUri)
+            startActivity(browserIntent)
+        }
