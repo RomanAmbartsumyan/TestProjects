@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WorkManager</string>
+    <string name="url">URL</string>
+    <string name="download">Download</string>
+    <string name="waiting_download">Ожидание загрузки</string>
+    <string name="retry">Retry</string>
+</resources>
