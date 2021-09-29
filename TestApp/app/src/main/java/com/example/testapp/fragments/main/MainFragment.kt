@@ -13,8 +13,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.testapp.R
 import com.example.testapp.databinding.FragmentMainBinding
-import com.example.testapp.list.CardAdapter
+import com.example.testapp.objects.Card
 import com.example.testapp.utils.autoCleared
+import com.example.testapp.utils.cardAdapter
+import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -24,7 +26,9 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class MainFragment : Fragment(R.layout.fragment_main) {
     private val binding: FragmentMainBinding by viewBinding()
     private val viewModel: MainFragmentViewModel by viewModel()
-    private var cardAdapter: CardAdapter by autoCleared()
+    private var cardAdapter: AsyncListDifferDelegationAdapter<Card> by autoCleared()
+
+//    private val cardAdapter = cardAdapter() by autoCleared()
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu, menu)
@@ -89,7 +93,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun initList() {
-        cardAdapter = CardAdapter { position -> info(position) }
+        cardAdapter = cardAdapter { info(it) }
         with(binding.postList) {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = cardAdapter
@@ -97,8 +101,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         }
     }
 
-    private fun info(position: Int) {
-        val card = cardAdapter.items[position]
+    private fun info(card: Card) {
         val action = MainFragmentDirections.actionMainFragmentToInfoFragment(card)
         findNavController().navigate(action)
     }
