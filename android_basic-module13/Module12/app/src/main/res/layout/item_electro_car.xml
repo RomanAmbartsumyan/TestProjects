@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="?attr/selectableItemBackground"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageViewPicture"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textViewBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewModel"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPicture"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Марка" />
+
+    <TextView
+        android:id="@+id/textViewModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Модель"
+        app:layout_constraintBottom_toTopOf="@+id/textViewElectroCar"
+        app:layout_constraintStart_toStartOf="@+id/textViewBrand"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBrand" />
+
+    <TextView
+        android:id="@+id/textViewElectroCar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/electro_car"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewModel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewModel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

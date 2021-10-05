@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Module12</string>
+    <string name="electro_car">Электрокар</string>
+    <string name="bmw">BMW</string>
+    <string name="tesla">Tesla</string>
+    <string name="ferrari">Ferrari</string>
+    <string name="kia">KIA</string>
+    <string name="ford">Ford</string>
+    <string name="tesla_image">https://somanyhorses.ru/wp-content/images/news/avto-novosti/2018/11/tesla-model-s-bez-kryshi-italjanskoe-tjuning-atele-pridumalo-kak-ot-nee-izbavitsja/5c617c5f55f35_3.jpg</string>
+    <string name="tesla_model">Model S</string>
+    <string name="ferrari_image">https://ag-spots-2018.o.auroraobjects.eu/2018/06/02/ferrari-812-superfast-c118302062018233110_3.jpg</string>
+    <string name="ferrari_model">812</string>
+    <string name="kia_image">https://www.zr.ru/d/story/fc/689916/20140811_1472576615727400681.jpg</string>
+    <string name="kia_model">Sorento</string>
+    <string name="bmw_image">https://1gai.ru/uploads/posts/2014-10/1414534638_5552.jpg</string>
+    <string name="bmw_model">Z5</string>
+    <string name="ford_image">https://i.artfile.ru/3008x2000_1065129_[www.ArtFile.ru].jpg</string>
+    <string name="ford_model">Mustang</string>
+    <string name="add_car">Добавить автомобиль</string>
+    <string name="brand_car">Марка автомобиля</string>
+    <string name="model_car">Модель автомобиля</string>
+    <string name="cancel">Отмена</string>
+    <string name="add">Добавить</string>
+    <string name="empty_list">Список автомобилей пуст</string>
+    <string name="autolist">AutoList</string>
+</resources>
